@@ -2,9 +2,9 @@ function setStation(station, target) {
     document.getElementById(target).value = station;
 }
 
-function swapStation() {
+function swapStations() {
     const departure = document.getElementById('departure').value;
-    const arrival   = document.getElementById('arrival').value;
+    const arrival = document.getElementById('arrival').value;
     document.getElementById('departure').value = arrival;
     document.getElementById('arrival').value = departure;
 }
