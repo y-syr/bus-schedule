@@ -12,26 +12,26 @@
         <h1>バス時刻表検索</h1>
         <form id="search-form">
             <label for="departure">出発地:</label>
-            <input type="text" id="departure" name="departure" value="庚申塚"><br>
+            <input type="text" id="departure" name="departure" value="庚申塚" required><br>
 
             <label for="arrival">到着地:</label>
-            <input type="text" id="arrival" name="arrival" value="中山駅北口"><br>
+            <input type="text" id="arrival" name="arrival" value="中山駅北口" required><br>
 
-            <button type="button" onclick="swapStation()">入れ替え</button><br><br>
+            <button type="button" onclick="swapStations()">入れ替える</button><br><br>
 
+            <div class="quick-set-buttons">
+                <button type="button" onclick="setStation('庚申塚', 'departure')">庚申塚を出発地に設定</button>
+                <button type="button" onclick="setStation('北八朔公園入口', 'departure')">北八朔公園入口を出発地に設定</button>
+                <button type="button" onclick="setStation('中山駅北口', 'departure')">中山駅北口を出発地に設定</button>
+                <button type="button" onclick="setStation('藤が丘駅', 'departure')">藤が丘駅を出発地に設定</button><br><br>
+                <button type="button" onclick="setStation('庚申塚', 'arrival')">庚申塚を到着地に設定</button>
+                <button type="button" onclick="setStation('北八朔公園入口', 'arrival')">北八朔公園入口を到着地に設定</button>
+                <button type="button" onclick="setStation('中山駅北口', 'arrival')">中山駅北口を到着地に設定</button>
+                <button type="button" onclick="setStation('藤が丘駅', 'arrival')">藤が丘駅を到着地に設定</button><br><br>
+            </div>
+
+            <button type="button" onclick="submitForm()">検索</button>
         </form>
-        <div class="quick-set-buttons">
-            <button type="button" onclick="setStation('庚申塚', 'departure')">庚申塚を出発地に設定</button>
-            <button type="button" onclick="setStation('北八朔公園入口', 'departure')">北八朔公園入口を出発地に設定</button><br>
-            <button type="button" onclick="setStation('藤が丘駅', 'departure')">藤が丘駅を出発地に設定</button>
-            <button type="button" onclick="setStation('中山駅北口', 'departure')">中山駅北口を出発地に設定</button><br><br>
-            <button type="button" onclick="setStation('庚申塚', 'arrival')">庚申塚を出発地に設定</button>
-            <button type="button" onclick="setStation('北八朔公園入口', 'arrival')">北八朔公園入口を出発地に設定</button><br>
-            <button type="button" onclick="setStation('藤が丘駅', 'arrival')">藤が丘駅を出発地に設定</button>
-            <button type="button" onclick="setStation('中山駅北口', 'arrival')">中山駅北口を出発地に設定</button><br><br>
-        </div>
-
-        <button type="button" onclick="submitForm()">検索</button>
     </div>
 </body>
 </html>
